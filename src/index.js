@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Button from './components/bootstrapBill';
+import TestModal from './components/modal';
+import NavBar from './components/navbar';
+import PointCounter from './components/secondary';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavBar />
+    <Button />
+    <TestModal />
+    <PointCounter />
   </React.StrictMode>,
   document.getElementById('root')
 );

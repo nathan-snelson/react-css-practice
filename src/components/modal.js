@@ -9,7 +9,7 @@ function TestModal() {
     const handleShow = () => setShow(true);
 
     return (
-        <>
+        <div className="input">
             <Button variant="primary" onClick={handleShow}>
                 Launch demo modal
             </Button>
@@ -32,7 +32,7 @@ function TestModal() {
                     </Button>
                 </Modal.Footer>
             </Modal>   
-        </>
+        </div>
     )
 }
 

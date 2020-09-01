@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 class PointCounter extends React.Component {
     constructor(props) {
@@ -36,17 +38,28 @@ class PointCounter extends React.Component {
 
     render() {
         return (
-            <>
-                <Button variant="outline-primary" onClick={this.increaseValue}>
-                    Increase
-                </Button>
-                <label>
-                    {this.state.value}
-                </label>
-                <Button variant="outline-secondary" onClick={this.decreaseValue}>
-                    Decrease
-                </Button>
-            </>
+            <div className="secondary">
+                <div className="input">
+                    <InputGroup>
+                        <InputGroup.Prepend>
+                            <InputGroup.Text id="firstPlayerName">Your Name</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl aria-label="Default" aria-describedby="firstPlayerName"/>
+                    </InputGroup>
+                </div>
+
+                <div className="counter">
+                    <Button variant="outline-primary" onClick={this.increaseValue}>
+                        Increase
+                    </Button>
+                    <label className="textElement">
+                        {this.state.value}
+                    </label>
+                    <Button variant="outline-secondary" onClick={this.decreaseValue}>
+                        Decrease
+                    </Button>
+                </div>                
+            </div>
         );
     }
 }

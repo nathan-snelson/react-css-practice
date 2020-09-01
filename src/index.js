@@ -2,19 +2,52 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Button from './components/bootstrapBill';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import db from './data/db.json';
+import schema from './data/schema.json';
+
 import TestModal from './components/modal';
 import NavBar from './components/navbar';
 import PointCounter from './components/secondary';
+import Table from './components/testTable';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <Button />
-    <TestModal />
-    <PointCounter />
+
+    <Container fluid>
+      <Row>
+        <Col className="justify-content-md-center">
+          <PointCounter />
+        </Col>
+
+        <Col className="justify-content-md-center">
+          <TestModal />
+        </Col>  
+      </Row>
+
+      <Row>
+        <Col className="justify-content-md-center">
+          <PointCounter />
+        </Col>
+
+        <Col>
+          <Table headers={Object.keys(schema)} rows={db}/>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col className="justify-content-md-center">
+          <PointCounter />
+        </Col>
+      </Row>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -18,4 +18,11 @@
     "wins": 6,
     "losses": 8,
     "points": 18
+  },
+  {
+    "id": "4",
+    "name": "Rob",
+    "wins": 7,
+    "losses": 7,
+    "points": 21
   }]

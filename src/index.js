@@ -17,6 +17,16 @@ import Table from './components/testTable';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+let sorted = db.sort(function (a,b) {
+  if(a.points > b.points) {
+    return -1;
+  }
+  if(a.points < b.points) {
+    return 1;
+  }
+  return 0;
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
@@ -38,7 +48,7 @@ ReactDOM.render(
         </Col>
 
         <Col>
-          <Table headers={Object.keys(schema)} rows={db}/>
+          <Table headers={Object.keys(schema)} rows={sorted}/>
         </Col>
       </Row>
 

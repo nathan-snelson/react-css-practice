@@ -23,7 +23,7 @@ code {
 }
 
 .textElement {
-  width: 100px;
+  width: 80px;
   align-items: center;
   justify-content: center;
   display: inline-flex;
@@ -33,5 +33,4 @@ code {
 .counter {
   align-items: center;
   justify-content: center;
-  display: inline;
 }

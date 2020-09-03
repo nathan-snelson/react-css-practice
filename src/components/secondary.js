@@ -3,21 +3,22 @@ import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 
-const PointCounter = () => {    
+const PointCounter = (props) => {    
     const [count, setCount] = React.useState(0);
+    const { number } = props;
 
     const increaseValue = () => (count === 15) ? setCount(15) : setCount(count + 1);
     
     const decreaseValue = () => (count === 0) ? setCount(0) : setCount(count - 1);
 
-    return (
+    return (        
         <div className="secondary">
             <div className="input">
                 <InputGroup>
                     <InputGroup.Prepend>
-                        <InputGroup.Text id="firstPlayerName">Your Name</InputGroup.Text>
+                        <InputGroup.Text id="secondaryName">Secondary {number}</InputGroup.Text>
                     </InputGroup.Prepend>
-                    <FormControl aria-label="Default" aria-describedby="firstPlayerName"/>
+                    <FormControl aria-label="Default" aria-describedby="secondaryName"/>
                 </InputGroup>
             </div>
 
@@ -31,8 +32,8 @@ const PointCounter = () => {
                 <Button variant="outline-secondary" onClick={decreaseValue}>
                     Decrease
                 </Button>
-            </div>                
-        </div>
+            </div>
+        </div>   
     )
 }
 

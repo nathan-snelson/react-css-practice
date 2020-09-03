@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Table = (props) => {
-    const {headers, rows} = props;
+    const {headers, rows} = props;    
 
     return (
-        <div>
-            <table className="table table-bordered table-hover">
+        <div className="input">
+            <table className="table table-bordered table-hover">                
                 <TableHeader headers={headers}></TableHeader>
                 <TableBody headers={headers} rows={rows}></TableBody>
             </table>

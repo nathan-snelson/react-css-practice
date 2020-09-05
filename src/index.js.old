@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+import NavBar from './components/navbar';
+import Main from './views/main';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from './App';
-
 ReactDOM.render(
-        <App />,
+  <React.StrictMode>
+    <NavBar />
+
+    <Main />    
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

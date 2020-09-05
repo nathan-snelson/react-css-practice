@@ -31,7 +31,7 @@ const TableBody = (props) => {
 
     function buildRow(row, headers) {
         return (
-            <tr key={row.id}>
+            <tr key={row.name}>
                 { headers.map((value, index) => {
                     return <td key={index}>{row[value]}</td>
                 })}

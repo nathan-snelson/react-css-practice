@@ -17,7 +17,7 @@ let sorted = db.sort(function (a,b) {
     return 0;
 });
 
-const Main = () => {
+const Home = () => {
     return (
         <Row>
             <Col xs={4} md={6}>
@@ -33,4 +33,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default Home;

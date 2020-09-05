@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Profile from './views/Profile';
 import About from './views/About';
 import Contact from './views/Contact';
-import Main from './views/Main';
+import Home from './views/Home';
 
 import NavBar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -36,7 +36,7 @@ function App() {
         </NavBar>         
         <hr />
         <Switch>
-          <Route exact path='/' component={Main} />
+          <Route exact path='/' component={Home} />
           <Route path='/profile' component={Profile} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />

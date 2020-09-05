@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-function TestModal() {
+function SubmitForm() {
     const [show, setShow] = React.useState();
 
     const handleClose = () => setShow(false);
@@ -36,4 +36,4 @@ function TestModal() {
     )
 }
 
-export default TestModal;
+export default SubmitForm;

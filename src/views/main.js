@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from '../components/testTable';
-import PointCounter from '../components/secondary';
+import Table from '../components/LeagueTable';
+import PointCounter from '../components/PointCounter';
 
 import db from '../data/db.json';
 import schema from '../data/schema.json';

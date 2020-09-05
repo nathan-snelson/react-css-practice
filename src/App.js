@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Profile from './views/Profile';
 import About from './views/About';
 import Contact from './views/Contact';
-import Main from './views/main';
+import Main from './views/Main';
 
 import NavBar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';

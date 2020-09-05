@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Table = (props) => {
+const LeagueTable = (props) => {
     const {headers, rows} = props;    
 
     return (
@@ -48,4 +48,4 @@ const TableBody = (props) => {
     )
 }
 
-export default Table;
+export default LeagueTable;

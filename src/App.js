@@ -7,6 +7,7 @@ import Profile from './views/Profile';
 import About from './views/About';
 import Contact from './views/Contact';
 import Home from './views/Home';
+import Event from './views/Events';
 
 import NavBar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -23,10 +24,11 @@ function App() {
 
           <NavBar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link><Link className="link" to={'/'}>Home</Link></Nav.Link>
-              <Nav.Link><Link className="link" to={'/about'}>About</Link></Nav.Link>
-              <Nav.Link><Link className="link" to={'/profile'}>Profile</Link></Nav.Link>
-              <Nav.Link><Link className="link" to={'/contact'}>Contact</Link></Nav.Link>                                          
+              <Link className="link" to={'/'}>Home</Link>
+              <Link className="link" to={'/about'}>About</Link>
+              <Link className="link" to={'/profile'}>Profile</Link>
+              <Link className="link" to={'/contact'}>Contact</Link>
+              <Link className="link" to={'/events'}>Events</Link>
             </Nav>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -40,6 +42,7 @@ function App() {
           <Route path='/profile' component={Profile} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
+          <Route path='/events' component={Event} />
         </Switch>
       </div>
     </Router>
